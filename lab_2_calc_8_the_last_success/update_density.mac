@@ -1,0 +1,28 @@
+*do,i,1,Ne,1
+
+!B=p*DENS(i,k)**(p-1)*ENER(i,k)/L
+B=p*DENS(i,k)**(p-1)*ENER(i,k)/ARG1
+
+DENS_new=DENS(i,k)*(B**ETA)
+
+LOW=MAX(po_min, DENS(i,k)*(1-KSI))
+
+HIGH=MIN(po_max, DENS(i,k)*(1+KSI))
+
+*IF,DENS_new,LT,LOW,THEN
+DENS_new=LOW
+*ENDIF
+
+*IF,DENS_new,GT,HIGH,THEN
+DENS_new=HIGH
+*ENDIF
+
+*IF,DENSFORB(i),LT,1,THEN
+DENS_new=1.0
+*ENDIF
+
+DENS(i, k+1)=DENS_new
+mp, ex, i, DENS(i, k+1)**p*E0
+
+*enddo
+

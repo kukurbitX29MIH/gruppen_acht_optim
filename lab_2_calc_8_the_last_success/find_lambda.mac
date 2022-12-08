@@ -1,0 +1,26 @@
+flag2=1
+*DOWHILE, flag2
+
+L=(L_max+L_min)/2
+
+*USE,update_density.mac,L
+
+V_sum=0
+
+*do,i,1,Ne,1
+V_sum=V_sum+VOL(i)*DENS(i, k+1)
+*enddo
+
+*IF,V_sum,GT,V_targ,THEN
+L_min=L
+*ELSE
+L_max=L
+*ENDIF
+
+crit=(V_sum-V_targ)/V_targ
+
+*IF,crit,ABLT,vol_err,THEN
+flag2=0
+*ENDIF
+
+*enddo

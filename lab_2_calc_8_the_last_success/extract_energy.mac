@@ -1,0 +1,3 @@
+*do,i,1,Ne,1
+*get,ENER(i,k),elem,i,sene
+*enddo

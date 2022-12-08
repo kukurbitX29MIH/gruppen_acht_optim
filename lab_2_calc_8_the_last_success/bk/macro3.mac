@@ -1,0 +1,344 @@
+/RGB, INDEX, 100, 100,  100,  0
+/RGB, INDEX,   80,   80,   80,  13
+/RGB, INDEX,   60,   60,   60,  14
+/RGB, INDEX,     0,    0,     0,   15
+
+
+
+a  = 5
+bb = 2
+mywidth = 0.01
+E0 = 2.1E11
+v = 0.3
+es = a/80
+Nelemx=a/es
+Nelemy=bb/es
+forcex = 100000
+
+!первое приближение для каждого элемента
+v_f = 0.3
+!целевой объем от начального
+v_t = 0.3
+!для вычисления целевого объема по элементам
+v_targ=0
+
+!параметры оптимизации
+po_min = 0.001
+po_max = 1.0
+ETA=0.29
+KSI=0.22
+L_min0=1e-20
+L_max0=1
+L=1e-3
+p=2
+iter_max=60
+vol_err=0.01
+
+!параметры оптимизации
+flag1=1
+flag2=1
+k=1
+
+
+
+/prep7
+
+!геометрия и меш
+rect,0,a,0,bb
+ET,1,plane182
+mp,ex,1,E
+mp,prxy,1,v
+esize,es
+amesh,all
+
+!массивы для оптимизации
+*get,Ne,elem,0,count
+*dim,ENER,array,Ne,iter_max+1
+*dim,DENS,array,Ne,iter_max+1
+*dim,DENSFORB,array,Ne
+*dim,VOL,array,Ne,1
+
+
+
+*DO,i,1,Nelemy
+*DO,j,1,Nelemx
+mytempnum1=(i-1)*Nelemx+j
+DENSFORB(mytempnum1)=2
+*IF,j,LT,2,THEN
+DENSFORB(mytempnum1)=0
+*ENDIF
+*ENDDO
+*ENDDO
+
+
+*do,i,1,Ne,1
+mp,ex,i,E0
+mp,prxy,i,v
+emodif,i,mat,i
+*GET,VOL(i),ELEM,i,VOLU
+DENS(i,k)=V_f
+*IF,DENSFORB(i),LT,1,THEN
+DENS(i,1)=1.0
+*ENDIF
+DENS(80*15+15-2,1)=0.1
+DENS(80*15+15-1,1)=0.1
+DENS(80*15+15+0,1)=0.1
+DENS(80*15+15+1,1)=0.1
+DENS(80*15+15+2,1)=0.1
+DENS(80*15+15+3,1)=0.1
+DENS(80*15+15+4,1)=0.1
+DENS(80*(15+1)+15-2,1)=0.1
+DENS(80*(15+1)+15-1,1)=0.1
+DENS(80*(15+1)+15+0,1)=0.1
+DENS(80*(15+1)+15+1,1)=0.1
+DENS(80*(15+1)+15+2,1)=0.1
+DENS(80*(15+1)+15+3,1)=0.1
+DENS(80*(15+1)+15+4,1)=0.1
+DENS(80*(15-1)+15-2,1)=0.1
+DENS(80*(15-1)+15-1,1)=0.1
+DENS(80*(15-1)+15+0,1)=0.1
+DENS(80*(15-1)+15+1,1)=0.1
+DENS(80*(15-1)+15+2,1)=0.1
+DENS(80*(15-1)+15+3,1)=0.1
+DENS(80*(15-1)+15+4,1)=0.1
+v_targ=v_targ+VOL(i)*DENS(i,1)
+mp,ex,i,DENS(i,1)**p*E0
+*enddo
+
+
+v_targg=0
+*do,i,1,Ne,1
+v_targg=v_targg+VOL(i)*V_t
+*enddo
+
+v_targ_1=v_targ/v_f*0.3
+v_targ_2=v_targ/v_f*0.3
+v_targ_3=v_targ/v_f*0.3
+v_targ_4=v_targ/v_f*0.3
+
+!задание ГУ
+/sol
+! F, NODE, Lab, VALUE, VALUE2, NEND, NINC  Specifies force loads at nodes.                    Lab=fx
+nsel,,loc,x,-es/10,es/10
+!  D, Node, Lab, VALUE, VALUE2, NEND, NINC, Lab2, Lab3, Lab4, Lab5, Lab6       Defines degree-of-freedom constraints at nodes.
+d,all,all,0
+!  NSEL, Type, Item, Comp, VMIN, VMAX, VINC, KABS   Selects a subset of nodes.
+nsel,,loc,x,a-es/10,a+es/10
+nsel,,loc,y,bb/2-es/2,bb/2+es/2
+!  SF, Nlist, Lab, VALUE, VALUE2      Specifies surface loads on nodes.          Nelemx
+!sf,all,pres,forcex
+F, all, fx, forcex
+allsel,all,all
+
+
+EPLOT
+
+solve
+
+
+! =======================  optimization ===========================  V  V  V
+!
+*do,k,1,iter_max,1
+/SHOW,png
+
+*CFOPEN,mytest.txt
+*VWRITE,'k=',k
+(A30,F4.0)
+*CFCLOSE
+
+L_max=L_max0
+L_min=L_min0
+
+FINISH  
+/POST1  
+!          SET, Lstep, Sbstep, Fact, KIMG, TIME, ANGLE, NSET, ORDER         Defines the data set to be read from the results file.                        Main Menu>General Postproc>Read Results>Last Set
+SET,LAST
+! PLNSOL, Item, Comp, KUND, Fact, FileID                Displays results as continuous contours.           Utility Menu>PlotCtrls>Animate>Deformed Results
+PLNSOL,S,EQV
+*USE,extract_energy.mac
+
+/prep7
+
+*USE,find_lambda.mac
+*USE,update_density.mac,L
+
+/sol
+allsel,all,all
+
+*do, i, 1, Ne, 1
+BFE,i,TEMP,1,DENS(i,k)
+*enddo
+!!!!!!  Specifies the uniform contour values on stress displays.
+/PBF,TEMP,,1
+!!!!!!  Produces an element display     Utility Menu>Plot>Elements
+eplot
+/CONTOUR,ALL,,0,,1
+!*USE,screenshot.mac
+!!!!!!  Automatically reissues the last display command for convenience.
+/REPLOT
+!*USE,screenshot.mac
+/CONTOUR
+
+solve
+
+k=k+1
+
+!*IF,k,GT,14,THEN
+!v_targ=v_targ_1
+!*ENDIF
+
+!*IF,k,GT,18,THEN
+!v_targ=v_targ_2
+!*ENDIF
+
+!*IF,k,GT,24,THEN
+!v_targ=v_targ_3
+!*ENDIF
+
+!*IF,k,GT,28,THEN
+!v_targ=v_targ_4
+!*ENDIF
+
+*enddo
+!
+! =======================  optimization ===========================  ^ ^ ^
+
+
+!скрины с шага k+1
+
+FINISH  
+/POST1  
+PLNSOL,S,EQV
+
+*do, i, 1, Ne, 1
+BFE,i,TEMP,1,DENS(i,k)
+*enddo
+/PBF,TEMP,,1
+eplot
+/CONTOUR,ALL,,0,,1
+!!!!!!!!1      Utility Menu>PlotCtrls>Redirect Plots>To PSCR File         Utility Menu>PlotCtrls>Redirect Plots>To Screen
+/SHOW,myimage.jpg,,0
+/REPLOT
+
+
+!  calc start mass
+myvol=mywidth*a*bb*8000
+
+
+
+!  calc end mass
+endmass=0
+*DO,i,1,Nelemy
+*DO,j,1,Nelemx
+endmass=endmass+8000*mywidth*es*es*DENS((i-1)*Nelemx+j, iter_max)
+*ENDDO
+*ENDDO
+
+
+
+*CFOPEN,debug_1.txt
+*VWRITE,'k=',k
+(A10,F4.0)
+*VWRITE,'Ne=',Ne
+(A10,F4.0)
+*VWRITE,'a=',a
+(A10,F4.0)
+*VWRITE,'b=',bb
+(A10,F4.0)
+*VWRITE,'Nelemy=',Nelemy
+(A10,F4.0)
+*VWRITE,'Nelemx=',Nelemx
+(A10,F4.0)
+*VWRITE,'myvol=', myvol
+(A13,F20.10)
+*VWRITE,'endmass=', endmass
+(A13,F20.5)
+*CFCLOSE
+
+
+
+
+
+
+
+!!!!!!!!  Training
+!!!!!!!!  Training
+!!!!!!!!  Training
+
+
+*DIM,TEMP1,ARRAY,20,30
+*DO,I,1,20
+*DO,J,1,30
+TEMP1(I,J)=2*I+3*J
+*ENDDO
+*ENDDO
+*mwrite,TEMP1,barha,txt  !in your input above the array specified was incorrect
+(30F10.0)
+
+
+
+*DIM,TEMP2,ARRAY,Nelemy,Nelemx
+*DO,I,1,Nelemy
+*DO,J,1,Nelemx
+TEMP2(I,J)=DENS((I-1)*Nelemx+J, iter_max)
+*ENDDO
+*ENDDO
+*mwrite,TEMP2,mydensdata,txt  
+(9F6.2)
+
+
+
+*mwrite,DENS,barhaAA,txt  !in your input above the array specified was incorrect
+(30F10.0)
+
+
+
+
+
+*dim,testarray,array,2,2
+
+*do,i,1,2
+*do,j,1,2
+    testarray(i,j)=3.0
+*enddo
+*enddo
+
+*CFOPEN,testfile.txt
+
+*do,i,1,2
+*do,j,1,2
+    *VWRITE,testarray(i,j)
+     (F4.0)
+*enddo
+*enddo
+
+*cfclose
+
+
+
+
+
+!! *DMAT, MyMatrix1, D, ALLOC, 2, 2
+!! MyMatrix1(1,1)=1
+!! MyMatrix1(1,2)=2
+!! MyMatrix1(2,1)=3
+!! MyMatrix1(2,2)=4
+!!*EXPORT,MyMatrix1,CSV,vvector.txt,2,2
+!!*EXPORT,MyMatrix1,Mat,vvvector.txt,2,2
+
+
+
+
+
+
+! adiv = ' | '
+!  *dim,nds, ,10
+! *dim,temps,,10
+! *vfill,nds(1),ramp,1,1
+! *vfill,temps(1),rand,70,1500
+! *cfopen,vw1.out
+! *VWRITE,'Temp: ',nds(1),temps(1),adiv, 'TREF: ',70
+! (A6,F8.0,g16.8,A3,A6,F10.4)
+! *cfclose
+
+
