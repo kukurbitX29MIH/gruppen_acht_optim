@@ -1,0 +1,461 @@
+C:\programming_windows\python\tests\main_v5_half_destroy\Scripts\python.exe C:\programming_windows\python\optimization_lab_1_v2\main_v5_half_destroy\main.py 
+Hi, PyCharm
+ 
+==== initial ====
+    >>>indiv:  0  m= 21.42  34  39    >>>indiv:  1  m= 31.23  48  40    >>>indiv:  2  m= 93.78  39  101    >>>indiv:  3  m= 127.9  117  48    >>>indiv:  4  m= 171.6  122  81    >>>indiv:  5  m= 198.7  96  125    >>>indiv:  6  m= 198.9  152  42    >>>indiv:  7  m= 201.8  82  136    >>>indiv:  8  m= 208.7  121  107    >>>indiv:  9  m= 221.3  129  105    >>>indiv:  10  m= 238.5  171  24    >>>indiv:  11  m= 243.5  145  97    >>>indiv:  12  m= 254.9  167  63    >>>indiv:  13  m= 271.1  169  73    >>>indiv:  14  m= 329.1  71  190    >>>indiv:  15  m= 335.2  172  111    >>>indiv:  16  m= 338.3  120  167    >>>indiv:  17  m= 347.5  126  166    >>>indiv:  18  m= 351.4  179  109    >>>indiv:  19  m= 395.8  176  136
+       evolution of cross-sections and mass in cur step:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+       evolution of cross-sections and mass total:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+   evolution of sum of all masses: 4580.63   kg   
+ 
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  0
+   >>>ind  0  m= 21.42 : 34  39     >>>ind  1  m= 26.28 : 39  42     >>>ind  2  m= 31.23 : 48  40     >>>ind  3  m= 66.59 : 82  40     >>>ind  4  m= 70.92 : 48  81     >>>ind  5  m= 90.79 : 90  57     >>>ind  6  m= 93.78 : 39  101     >>>ind  7  m= 124.4 : 64  107     >>>ind  8  m= 127.9 : 117  48     >>>ind  9  m= 131.2 : 122  39     >>>ind  10  m= 135.6 : 121  48     >>>ind  11  m= 155.3 : 96  101     >>>ind  12  m= 240.1 : 124  121     >>>ind  13  m= 288.6 : 143  125     >>>ind  14  m= 323.6 : 53  194     >>>ind  15  m= 338.3 : 193  71     >>>ind  16  m= 364.9 : 163  138     >>>ind  17  m= 413.6 : 199  110     >>>ind  18  m= 452.9 : 159  177     >>>ind  19  m= 490.1 : 172  178      
+   evolution of cross-sections and min mass in cur step:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+       evolution of cross-sections and min mass total:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+   evolution of sum of all masses: 3987.51   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  1
+   >>>ind  0  m= 21.42 : 34  39     >>>ind  1  m= 24.34 : 39  39     >>>ind  2  m= 26.28 : 39  42     >>>ind  3  m= 30.6 : 48  39     >>>ind  4  m= 31.23 : 48  40     >>>ind  5  m= 31.23 : 48  40     >>>ind  6  m= 45.57 : 64  40     >>>ind  7  m= 57.42 : 43  73     >>>ind  8  m= 64.66 : 39  81     >>>ind  9  m= 66.59 : 82  40     >>>ind  10  m= 70.92 : 48  81     >>>ind  11  m= 154.8 : 72  119     >>>ind  12  m= 163.3 : 33  139     >>>ind  13  m= 214.6 : 85  140     >>>ind  14  m= 236.2 : 139  101     >>>ind  15  m= 266.4 : 152  101     >>>ind  16  m= 297.8 : 192  19     >>>ind  17  m= 352.0 : 60  201     >>>ind  18  m= 353.0 : 171  122     >>>ind  19  m= 507.7 : 171  185      
+   evolution of cross-sections and min mass in cur step:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+       evolution of cross-sections and min mass total:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+   evolution of sum of all masses: 3016.0599999999995   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  2
+   >>>ind  0  m= 21.42 : 34  39     >>>ind  1  m= 22.05 : 34  40     >>>ind  2  m= 24.34 : 39  39     >>>ind  3  m= 24.34 : 39  39     >>>ind  4  m= 24.97 : 39  40     >>>ind  5  m= 26.28 : 39  42     >>>ind  6  m= 26.28 : 39  42     >>>ind  7  m= 30.6 : 48  39     >>>ind  8  m= 30.6 : 48  39     >>>ind  9  m= 31.23 : 48  40     >>>ind  10  m= 45.01 : 55  51     >>>ind  11  m= 64.74 : 82  37     >>>ind  12  m= 125.8 : 115  50     >>>ind  13  m= 163.8 : 139  34     >>>ind  14  m= 305.0 : 190  45     >>>ind  15  m= 354.1 : 195  79     >>>ind  16  m= 377.5 : 148  159     >>>ind  17  m= 422.6 : 160  165     >>>ind  18  m= 473.6 : 152  190     >>>ind  19  m= 553.6 : 184  188      
+   evolution of cross-sections and min mass in cur step:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+       evolution of cross-sections and min mass total:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+   evolution of sum of all masses: 3147.8599999999997   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  3
+   >>>ind  0  m= 21.42 : 34  39     >>>ind  1  m= 22.05 : 34  40     >>>ind  2  m= 22.05 : 34  40     >>>ind  3  m= 22.05 : 34  40     >>>ind  4  m= 24.34 : 39  39     >>>ind  5  m= 24.34 : 39  39     >>>ind  6  m= 24.34 : 39  39     >>>ind  7  m= 24.34 : 39  39     >>>ind  8  m= 24.34 : 39  39     >>>ind  9  m= 24.34 : 39  39     >>>ind  10  m= 32.32 : 58  26     >>>ind  11  m= 59.3 : 74  44     >>>ind  12  m= 264.8 : 115  141     >>>ind  13  m= 267.9 : 119  139     >>>ind  14  m= 278.6 : 173  70     >>>ind  15  m= 292.2 : 161  103     >>>ind  16  m= 301.6 : 92  171     >>>ind  17  m= 328.7 : 33  200     >>>ind  18  m= 375.1 : 159  147     >>>ind  19  m= 419.9 : 161  163      
+   evolution of cross-sections and min mass in cur step:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+       evolution of cross-sections and min mass total:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+   evolution of sum of all masses: 2854.0299999999997   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  4
+   >>>ind  0  m= 21.42 : 34  39     >>>ind  1  m= 21.42 : 34  39     >>>ind  2  m= 21.42 : 34  39     >>>ind  3  m= 21.42 : 34  39     >>>ind  4  m= 22.05 : 34  40     >>>ind  5  m= 22.05 : 34  40     >>>ind  6  m= 22.05 : 34  40     >>>ind  7  m= 22.05 : 34  40     >>>ind  8  m= 22.5 : 37  38     >>>ind  9  m= 24.34 : 39  39     >>>ind  10  m= 24.34 : 39  39     >>>ind  11  m= 47.56 : 53  56     >>>ind  12  m= 52.43 : 77  25     >>>ind  13  m= 68.24 : 51  77     >>>ind  14  m= 88.86 : 58  88     >>>ind  15  m= 139.9 : 29  129     >>>ind  16  m= 189.8 : 152  25     >>>ind  17  m= 275.4 : 117  144     >>>ind  18  m= 300.3 : 176  81     >>>ind  19  m= 309.6 : 195  26      
+   evolution of cross-sections and min mass in cur step:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+       evolution of cross-sections and min mass total:   sec  0:  34   sec  1:  39     mass  21.42     u_max  -0.01134     s_mises_max  30530000.0  
+   evolution of sum of all masses: 1717.15   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  5
+   >>>ind  0  m= 20.8 : 34  38     >>>ind  1  m= 21.42 : 34  39     >>>ind  2  m= 21.42 : 34  39     >>>ind  3  m= 21.42 : 34  39     >>>ind  4  m= 21.42 : 34  39     >>>ind  5  m= 21.42 : 34  39     >>>ind  6  m= 21.42 : 34  39     >>>ind  7  m= 21.42 : 34  39     >>>ind  8  m= 21.42 : 34  39     >>>ind  9  m= 22.05 : 34  40     >>>ind  10  m= 26.41 : 30  49     >>>ind  11  m= 92.32 : 52  94     >>>ind  12  m= 116.9 : 76  94     >>>ind  13  m= 136.7 : 129  21     >>>ind  14  m= 178.6 : 70  132     >>>ind  15  m= 228.6 : 166  32     >>>ind  16  m= 235.3 : 129  113     >>>ind  17  m= 246.6 : 51  168     >>>ind  18  m= 274.4 : 149  110     >>>ind  19  m= 465.2 : 169  172      
+   evolution of cross-sections and min mass in cur step:   sec  0:  34   sec  1:  38     mass  20.8     u_max  -0.01144     s_mises_max  30530000.0  
+       evolution of cross-sections and min mass total:   sec  0:  34   sec  1:  38     mass  20.8     u_max  -0.01144     s_mises_max  30530000.0  
+   evolution of sum of all masses: 2215.24   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  6
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 20.8 : 34  38     >>>ind  2  m= 20.8 : 34  38     >>>ind  3  m= 21.42 : 34  39     >>>ind  4  m= 21.42 : 34  39     >>>ind  5  m= 21.42 : 34  39     >>>ind  6  m= 21.42 : 34  39     >>>ind  7  m= 21.42 : 34  39     >>>ind  8  m= 21.42 : 34  39     >>>ind  9  m= 21.42 : 34  39     >>>ind  10  m= 21.42 : 34  39     >>>ind  11  m= 129.9 : 66  109     >>>ind  12  m= 157.2 : 34  136     >>>ind  13  m= 189.3 : 42  148     >>>ind  14  m= 226.1 : 128  109     >>>ind  15  m= 239.1 : 135  108     >>>ind  16  m= 267.4 : 92  158     >>>ind  17  m= 309.4 : 107  165     >>>ind  18  m= 341.8 : 98  182     >>>ind  19  m= 489.0 : 152  195      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 2577.05   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  7
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 16.94 : 34  31     >>>ind  2  m= 19.37 : 30  39     >>>ind  3  m= 20.8 : 34  38     >>>ind  4  m= 20.8 : 34  38     >>>ind  5  m= 20.8 : 34  38     >>>ind  6  m= 20.8 : 34  38     >>>ind  7  m= 21.42 : 34  39     >>>ind  8  m= 21.42 : 34  39     >>>ind  9  m= 21.42 : 34  39     >>>ind  10  m= 66.18 : 88  23     >>>ind  11  m= 185.1 : 145  46     >>>ind  12  m= 196.4 : 76  137     >>>ind  13  m= 211.3 : 157  42     >>>ind  14  m= 230.7 : 85  147     >>>ind  15  m= 289.6 : 131  138     >>>ind  16  m= 310.3 : 124  153     >>>ind  17  m= 354.3 : 139  158     >>>ind  18  m= 532.9 : 183  182     >>>ind  19  m= 533.6 : 197  167      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 3109.04   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  8
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 16.94 : 34  31     >>>ind  2  m= 16.94 : 34  31     >>>ind  3  m= 16.94 : 34  31     >>>ind  4  m= 18.75 : 30  38     >>>ind  5  m= 18.75 : 30  38     >>>ind  6  m= 19.37 : 30  39     >>>ind  7  m= 20.8 : 34  38     >>>ind  8  m= 20.8 : 34  38     >>>ind  9  m= 20.8 : 34  38     >>>ind  10  m= 83.88 : 54  87     >>>ind  11  m= 132.0 : 105  74     >>>ind  12  m= 156.5 : 129  54     >>>ind  13  m= 227.5 : 94  140     >>>ind  14  m= 256.1 : 178  18     >>>ind  15  m= 282.1 : 173  73     >>>ind  16  m= 314.3 : 83  180     >>>ind  17  m= 382.2 : 159  150     >>>ind  18  m= 427.6 : 140  184     >>>ind  19  m= 493.0 : 179  172      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 2940.16   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  9
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 16.94 : 34  31     >>>ind  3  m= 16.94 : 34  31     >>>ind  4  m= 16.94 : 34  31     >>>ind  5  m= 16.94 : 34  31     >>>ind  6  m= 16.94 : 34  31     >>>ind  7  m= 16.94 : 34  31     >>>ind  8  m= 18.75 : 30  38     >>>ind  9  m= 18.75 : 30  38     >>>ind  10  m= 120.6 : 34  118     >>>ind  11  m= 139.0 : 129  27     >>>ind  12  m= 152.6 : 114  78     >>>ind  13  m= 167.0 : 90  113     >>>ind  14  m= 211.2 : 79  142     >>>ind  15  m= 273.0 : 79  167     >>>ind  16  m= 281.3 : 49  181     >>>ind  17  m= 344.2 : 200  55     >>>ind  18  m= 357.5 : 169  127     >>>ind  19  m= 451.1 : 200  128      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 2666.4199999999996   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  10
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 16.94 : 34  31     >>>ind  7  m= 16.94 : 34  31     >>>ind  8  m= 16.94 : 34  31     >>>ind  9  m= 16.94 : 34  31     >>>ind  10  m= 61.96 : 52  71     >>>ind  11  m= 62.41 : 76  45     >>>ind  12  m= 95.78 : 56  94     >>>ind  13  m= 139.8 : 79  106     >>>ind  14  m= 146.0 : 94  97     >>>ind  15  m= 150.0 : 66  120     >>>ind  16  m= 175.2 : 99  110     >>>ind  17  m= 287.1 : 117  149     >>>ind  18  m= 351.2 : 141  155     >>>ind  19  m= 524.8 : 160  200      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 2151.35   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  11
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 90.79 : 105  18     >>>ind  11  m= 95.56 : 92  59     >>>ind  12  m= 215.7 : 136  92     >>>ind  13  m= 227.6 : 30  166     >>>ind  14  m= 265.5 : 54  174     >>>ind  15  m= 337.2 : 152  138     >>>ind  16  m= 339.1 : 63  196     >>>ind  17  m= 363.0 : 171  127     >>>ind  18  m= 367.9 : 145  158     >>>ind  19  m= 403.6 : 137  178      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 2854.8500000000004   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  12
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 20.84 : 42  29     >>>ind  11  m= 51.2 : 48  64     >>>ind  12  m= 122.0 : 122  19     >>>ind  13  m= 147.5 : 109  81     >>>ind  14  m= 148.6 : 132  34     >>>ind  15  m= 190.5 : 50  146     >>>ind  16  m= 296.8 : 164  101     >>>ind  17  m= 321.0 : 164  115     >>>ind  18  m= 345.9 : 134  159     >>>ind  19  m= 369.6 : 106  187      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 2162.8399999999997   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  13
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 26.28 : 39  42     >>>ind  11  m= 62.8 : 31  83     >>>ind  12  m= 95.78 : 56  94     >>>ind  13  m= 132.9 : 47  120     >>>ind  14  m= 139.1 : 113  68     >>>ind  15  m= 142.1 : 114  69     >>>ind  16  m= 143.6 : 113  72     >>>ind  17  m= 149.2 : 93  100     >>>ind  18  m= 335.4 : 39  201     >>>ind  19  m= 351.0 : 161  134      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 1727.06   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  14
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 118.3 : 72  98     >>>ind  11  m= 124.9 : 96  80     >>>ind  12  m= 185.1 : 79  130     >>>ind  13  m= 240.3 : 165  53     >>>ind  14  m= 251.1 : 67  164     >>>ind  15  m= 322.1 : 171  105     >>>ind  16  m= 384.8 : 168  141     >>>ind  17  m= 388.3 : 146  165     >>>ind  18  m= 418.2 : 141  180     >>>ind  19  m= 527.1 : 182  181      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 3109.0999999999995   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  15
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 17.64 : 42  21     >>>ind  11  m= 68.68 : 67  64     >>>ind  12  m= 72.4 : 53  79     >>>ind  13  m= 104.4 : 87  74     >>>ind  14  m= 185.0 : 66  137     >>>ind  15  m= 243.7 : 35  171     >>>ind  16  m= 257.5 : 107  144     >>>ind  17  m= 297.1 : 150  121     >>>ind  18  m= 326.0 : 187  76     >>>ind  19  m= 346.6 : 61  199      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 2067.92   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  16
+   >>>ind  0  m= 14.89 : 30  31     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 87.12 : 99  33     >>>ind  11  m= 91.6 : 29  103     >>>ind  12  m= 162.3 : 94  107     >>>ind  13  m= 166.6 : 140  35     >>>ind  14  m= 192.2 : 151  35     >>>ind  15  m= 291.6 : 74  176     >>>ind  16  m= 322.5 : 78  185     >>>ind  17  m= 385.0 : 183  121     >>>ind  18  m= 405.8 : 168  150     >>>ind  19  m= 468.2 : 189  151      
+   evolution of cross-sections and min mass in cur step:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+       evolution of cross-sections and min mass total:   sec  0:  30   sec  1:  31     mass  14.89     u_max  -0.01945     s_mises_max  44440000.0  
+   evolution of sum of all masses: 2721.82   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  17
+   >>>ind  0  m= 12.8 : 32  24     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 14.89 : 30  31     >>>ind  11  m= 51.47 : 65  47     >>>ind  12  m= 93.67 : 75  78     >>>ind  13  m= 142.5 : 109  77     >>>ind  14  m= 183.5 : 84  126     >>>ind  15  m= 193.2 : 132  82     >>>ind  16  m= 202.8 : 70  143     >>>ind  17  m= 230.6 : 165  40     >>>ind  18  m= 251.1 : 67  164     >>>ind  19  m= 293.0 : 160  105      
+   evolution of cross-sections and min mass in cur step:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+       evolution of cross-sections and min mass total:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+   evolution of sum of all masses: 1803.5399999999997   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  18
+   >>>ind  0  m= 12.8 : 32  24     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 14.89 : 30  31     >>>ind  11  m= 105.0 : 48  104     >>>ind  12  m= 162.3 : 94  107     >>>ind  13  m= 168.8 : 90  114     >>>ind  14  m= 210.6 : 157  41     >>>ind  15  m= 262.7 : 172  57     >>>ind  16  m= 269.4 : 115  143     >>>ind  17  m= 315.2 : 124  155     >>>ind  18  m= 382.7 : 197  95     >>>ind  19  m= 453.4 : 138  194      
+   evolution of cross-sections and min mass in cur step:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+       evolution of cross-sections and min mass total:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+   evolution of sum of all masses: 2491.8   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  19
+   >>>ind  0  m= 12.8 : 32  24     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 106.4 : 113  23     >>>ind  11  m= 111.2 : 45  109     >>>ind  12  m= 122.0 : 122  19     >>>ind  13  m= 201.2 : 148  57     >>>ind  14  m= 278.8 : 120  143     >>>ind  15  m= 430.9 : 116  201     >>>ind  16  m= 433.1 : 167  162     >>>ind  17  m= 506.9 : 178  178     >>>ind  18  m= 543.1 : 167  200     >>>ind  19  m= 578.9 : 181  199      
+   evolution of cross-sections and min mass in cur step:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+       evolution of cross-sections and min mass total:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+   evolution of sum of all masses: 3459.31   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  20
+   >>>ind  0  m= 12.8 : 32  24     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 54.92 : 33  76     >>>ind  11  m= 200.8 : 51  150     >>>ind  12  m= 230.7 : 54  161     >>>ind  13  m= 235.9 : 162  57     >>>ind  14  m= 244.7 : 75  158     >>>ind  15  m= 280.3 : 163  92     >>>ind  16  m= 299.1 : 181  68     >>>ind  17  m= 328.4 : 187  78     >>>ind  18  m= 335.5 : 154  135     >>>ind  19  m= 392.1 : 153  160      
+   evolution of cross-sections and min mass in cur step:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+       evolution of cross-sections and min mass total:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+   evolution of sum of all masses: 2749.23   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  21
+   >>>ind  0  m= 12.8 : 32  24     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 102.5 : 100  53     >>>ind  11  m= 110.2 : 116  18     >>>ind  12  m= 162.8 : 43  136     >>>ind  13  m= 174.8 : 123  82     >>>ind  14  m= 211.0 : 33  159     >>>ind  15  m= 219.7 : 157  53     >>>ind  16  m= 259.5 : 156  90     >>>ind  17  m= 289.4 : 67  178     >>>ind  18  m= 333.1 : 135  153     >>>ind  19  m= 360.1 : 117  177      
+   evolution of cross-sections and min mass in cur step:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+       evolution of cross-sections and min mass total:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+   evolution of sum of all masses: 2369.91   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  22
+   >>>ind  0  m= 12.8 : 32  24     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 106.6 : 94  67     >>>ind  11  m= 137.2 : 97  88     >>>ind  12  m= 137.2 : 45  123     >>>ind  13  m= 155.6 : 87  109     >>>ind  14  m= 172.6 : 29  144     >>>ind  15  m= 185.0 : 137  66     >>>ind  16  m= 199.4 : 91  129     >>>ind  17  m= 332.4 : 56  196     >>>ind  18  m= 442.5 : 196  130     >>>ind  19  m= 557.0 : 181  192      
+   evolution of cross-sections and min mass in cur step:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+       evolution of cross-sections and min mass total:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+   evolution of sum of all masses: 2572.31   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  23
+   >>>ind  0  m= 12.8 : 32  24     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 55.36 : 38  74     >>>ind  11  m= 99.28 : 109  23     >>>ind  12  m= 179.8 : 104  108     >>>ind  13  m= 208.8 : 150  60     >>>ind  14  m= 234.8 : 88  147     >>>ind  15  m= 248.6 : 62  165     >>>ind  16  m= 330.4 : 105  174     >>>ind  17  m= 343.5 : 144  149     >>>ind  18  m= 541.7 : 197  170     >>>ind  19  m= 580.6 : 190  191      
+   evolution of cross-sections and min mass in cur step:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+       evolution of cross-sections and min mass total:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+   evolution of sum of all masses: 2969.65   kg   
+
+crossingover
+mutation  0
+mutation  1
+mutation  2
+mutation  3
+mutation  4
+mutation  5
+mutation  6
+mutation  7
+mutation  8
+mutation  9
+
+======  gen:  24
+   >>>ind  0  m= 12.8 : 32  24     >>>ind  1  m= 14.89 : 30  31     >>>ind  2  m= 14.89 : 30  31     >>>ind  3  m= 14.89 : 30  31     >>>ind  4  m= 14.89 : 30  31     >>>ind  5  m= 14.89 : 30  31     >>>ind  6  m= 14.89 : 30  31     >>>ind  7  m= 14.89 : 30  31     >>>ind  8  m= 14.89 : 30  31     >>>ind  9  m= 14.89 : 30  31     >>>ind  10  m= 87.87 : 78  70     >>>ind  11  m= 92.67 : 72  80     >>>ind  12  m= 133.6 : 115  59     >>>ind  13  m= 302.1 : 178  78     >>>ind  14  m= 306.5 : 47  190     >>>ind  15  m= 373.3 : 174  128     >>>ind  16  m= 375.7 : 106  189     >>>ind  17  m= 378.1 : 138  168     >>>ind  18  m= 437.4 : 185  143     >>>ind  19  m= 454.4 : 166  171      
+   evolution of cross-sections and min mass in cur step:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+       evolution of cross-sections and min mass total:   sec  0:  32   sec  1:  24     mass  12.8     u_max  -0.01938     s_mises_max  43400000.0  
+   evolution of sum of all masses: 3088.4500000000003   kg   
+
+
+Process finished with exit code 0

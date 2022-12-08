@@ -1,0 +1,64 @@
+/verify,optimization
+/prep7
+sec1linsz1=0.030
+sec2linsz1=0.030
+/title, optimization, beam
+et,1,beam189
+type
+keyopt,1,2,0
+mp,ex,1,200e9    !define material
+mp,nuxy,1,0.3
+mp,dens,1,8000
+sect,1,beam,rect
+secd,0.17400000000000002,0.17400000000000002
+sect,2,beam,rect
+secd,0.128,0.128
+
+n,1,0
+n,11,1
+fill
+e,1,3,2
+!egen,5,2,1
+n,11,1
+n,21,2
+fill
+!e,11,13,12
+egen,10,2,1
+*get,Ne,elem,0,count
+
+*do,i,1,Ne,1
+ *if,i,LE,Ne/2,then
+ emodif,i,sec,1
+ *else 
+ emodif,i,sec,2
+ *endif
+*enddo
+/eshape,1,0
+eplot
+
+mass=0
+*do,i,1,Ne,1
+*get,elemm,elem,i,volu
+mass = mass + elemm
+*enddo
+mass=mass*8000
+
+/sol
+nsel,,loc,x,0
+d,all,all,0
+nsel,,loc,x,2
+f,all,fy,-100
+allsel,all
+
+solve
+
+/post1
+*get,smax,secr,,s,eqv,max
+*get,umax,node,21,u,y
+*cfopen,res,txt
+*vwrite, 's= ',smax, 'u= ', umax, 'v= ',mass
+(a3,e10.4)
+
+
+
+*cfclose

@@ -1,0 +1,513 @@
+
+ Ansys Mechanical Enterprise Academic Student      
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2022 R2          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright 1971-2022 Ansys, Inc.  All rights reserved.       *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2022 R2 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys, Inc. Products 2022 R2
+ Autodyn 2022 R2 
+ SpaceClaim 2022 R2  
+ CFX (includes CFD-Post) 2022 R2 
+ Chemkin 2022 R2 
+ EnSight 2022 R2 
+ FENSAP-ICE 2022 R2  
+ Fluent (includes CFD-Post) 2022 R2  
+ Polyflow (includes CFD-Post) 2022 R2
+ Forte (includes EnSight) 2022 R2
+ TurboGrid 2022 R2   
+ Aqwa 2022 R2
+ Mechanical Products 2022 R2 
+ ACIS Geometry Interface 2022 R2 
+ AutoCAD Geometry Interface 2022 R2  
+ Catia, Version 4 Geometry Interface 2022 R2 
+ Catia, Version 5 Geometry Interface 2022 R2 
+ Catia, Version 6 Geometry Interface 2022 R2 
+ Creo Elements/Direct Modeling Geometry Interface 2022 R2
+ Creo Parametric Geometry Interface 2022 R2  
+ Inventor Geometry Interface 2022 R2 
+ JTOpen Geometry Interface 2022 R2   
+ NX Geometry Interface 2022 R2   
+ Parasolid Geometry Interface  2022 R2   
+ Solid Edge Geometry Interface 2022 R2   
+ SOLIDWORKS Geometry Interface 2022 R2   
+ Academic Student 2022 R2
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = file                                                                                                                                                                                                                                                    
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+  SHARED MEMORY PARALLEL REQUESTED
+    SINGLE PROCESS WITH   4 THREADS REQUESTED
+    TOTAL OF     4 CORES REQUESTED
+  INPUT FILE NAME              = C:\programming_windows\python\optimization_lab_1_v2\main_v5_half_destroy\script.txt
+  OUTPUT FILE NAME             = C:\programming_windows\python\optimization_lab_1_v2\main_v5_half_destroy\script.out
+  START-UP FILE MODE           = READ  
+  STOP FILE MODE               = READ  
+  INITIAL DIRECTORY = C:\programming_windows\python\optimization_lab_1_v2\main_v5_half_destroy
+
+ RELEASE= 2022 R2              BUILD= 22.2      UP20220516   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=file  18:12:00  NOV 26, 2022 CP=      0.219
+
+     0  /verify,optimization
+     0  /prep7  
+     0  sec1linsz1=0.030
+     0  sec2linsz1=0.030
+     0  /title, optimization, beam  
+     0  et,1,beam189
+     0  type
+     0  keyopt,1,2,0
+     0  mp,ex,1,200e9    !define material   
+     0  mp,nuxy,1,0.3   
+     0  mp,dens,1,8000  
+     0  sect,1,beam,rect
+     0  secd,0.17400000000000002,0.17400000000000002
+     0  sect,2,beam,rect
+     0  secd,0.128,0.128
+     0      
+     0  n,1,0   
+     0  n,11,1  
+     0  fill
+     0  e,1,3,2 
+     0  !egen,5,2,1 
+     0  n,11,1  
+     0  n,21,2  
+     0  fill
+     0  !e,11,13,12 
+     0  egen,10,2,1 
+     0  *get,Ne,elem,0,count
+     0      
+     0  *do,i,1,Ne,1
+     0   *if,i,LE,Ne/2,then 
+     0   emodif,i,sec,1 
+     0   *else  
+     0   emodif,i,sec,2 
+     0   *endif 
+     0  *enddo  
+     0  /eshape,1,0 
+     0  eplot   
+     0      
+     0  mass=0  
+     0  *do,i,1,Ne,1
+     0  *get,elemm,elem,i,volu  
+     0  mass = mass + elemm 
+     0  *enddo  
+     0  mass=mass*8000  
+     0      
+     0  /sol
+     0  nsel,,loc,x,0   
+     0  d,all,all,0 
+     0  nsel,,loc,x,2   
+     0  f,all,fy,-100   
+     0  allsel,all  
+     0      
+     0  solve   
+     0      
+     0  /post1  
+     0  *get,smax,secr,,s,eqv,max   
+     0  *get,umax,node,21,u,y   
+     0  *cfopen,res,txt 
+     0  *vwrite, 's= ',smax, 'u= ', umax, 'v= ',mass
+     0  (a3,e10.4)  
+     0      
+     0      
+     0      
+     0  *cfclose
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc_2\ANSYS Student\v222\ANSYS\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc_2\ANSYS Student\v222\ANSYS\apdl\start.ans  LINE=       0
+
+ *** VERIFICATION RUN - CASE optimization                     ***  OPTION=  4
+   *****MAPDL VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+
+ PARAMETER SEC1LINSZ1 =    0.3000000000E-01
+
+ PARAMETER SEC2LINSZ1 =    0.3000000000E-01
+
+ TITLE= 
+  optimization, beam                                                           
+
+
+ ELEMENT TYPE          1 IS BEAM189      3-D 3-NODE BEAM             
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY    UZ    ROTX  ROTY  ROTZ
+  THREE-DIMENSIONAL MODEL
+
+ ELEMENT TYPE SET TO         1
+
+ ELEMENT TYPE       1 IS BEAM189      3-D 3-NODE BEAM             
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY    UZ    ROTX  ROTY  ROTZ
+  THREE-DIMENSIONAL MODEL
+
+ MATERIAL          1     EX   =  0.2000000E+12  
+
+ MATERIAL          1     NUXY =  0.3000000      
+
+ MATERIAL          1     DENS =   8000.000      
+                                   
+   INPUT SECTION ID NUMBER                  1
+   INPUT SECTION TYPE                 BEAM
+   INPUT BEAM SECTION SUBTYPE         Rectangle       
+   INPUT BEAM SECTION NAME                    
+                     
+   SECTION ID NUMBER IS:            1
+   BEAM SECTION TYPE IS:     Rectangle       
+   BEAM SECTION NAME IS:             
+   COMPUTED BEAM SECTION DATA SUMMARY:
+    Area                 = 0.30276E-01
+    Iyy                  = 0.76386E-04
+    Iyz                  =-0.38116E-20
+    Izz                  = 0.76386E-04
+    Warping Constant     = 0.26727E-08
+    Torsion Constant     = 0.13074E-03
+    Centroid Y           = 0.31334E-17
+    Centroid Z           = 0.17905E-17
+    Shear Center Y       =-0.11262E-17
+    Shear Center Z       =-0.10612E-17
+    Shear Correction-xy  = 0.84211    
+    Shear Correction-yz  = 0.44011E-15
+    Shear Correction-xz  = 0.84211    
+                 
+    Beam Section is offset to CENTROID of cross section
+                                   
+   INPUT SECTION ID NUMBER                  2
+   INPUT SECTION TYPE                 BEAM
+   INPUT BEAM SECTION SUBTYPE         Rectangle       
+   INPUT BEAM SECTION NAME                    
+                     
+   SECTION ID NUMBER IS:            2
+   BEAM SECTION TYPE IS:     Rectangle       
+   BEAM SECTION NAME IS:             
+   COMPUTED BEAM SECTION DATA SUMMARY:
+    Area                 = 0.16384E-01
+    Iyy                  = 0.22370E-04
+    Iyz                  =-0.13764E-20
+    Izz                  = 0.22370E-04
+    Warping Constant     = 0.42357E-09
+    Torsion Constant     = 0.38286E-04
+    Centroid Y           = 0.20680E-18
+    Centroid Z           = 0.33087E-17
+    Shear Center Y       = 0.29582E-18
+    Shear Center Z       = 0.58610E-17
+    Shear Correction-xy  = 0.84211    
+    Shear Correction-yz  = 0.10408E-14
+    Shear Correction-xz  = 0.84211    
+                 
+    Beam Section is offset to CENTROID of cross section
+
+ NODE          1  KCS=      0  X,Y,Z=  0.0000       0.0000       0.0000     
+
+ NODE         11  KCS=      0  X,Y,Z=  1.0000       0.0000       0.0000     
+
+ FILL       9 POINTS BETWEEN NODE       1 AND NODE      11
+  START WITH NODE       2 AND INCREMENT BY       1
+
+ ELEMENT      1       1      3      2      0
+
+ NODE         11  KCS=      0  X,Y,Z=  1.0000       0.0000       0.0000     
+
+ NODE         21  KCS=      0  X,Y,Z=  2.0000       0.0000       0.0000     
+
+ FILL       9 POINTS BETWEEN NODE      11 AND NODE      21
+  START WITH NODE      12 AND INCREMENT BY       1
+
+ GENERATE      10 TOTAL SETS OF ELEMENTS WITH NODE INCREMENT OF         2
+   SET IS SELECTED ELEMENTS IN RANGE         1 TO         1 IN STEPS OF       1
+
+ MAXIMUM ELEMENT NUMBER=        10
+
+ *GET  NE        FROM  ELEM  ITEM=COUN           VALUE=  10.0000000    
+
+ *DO LOOP ON PARAMETER= I FROM  1.0000     TO  10.000     BY  1.0000    
+
+ *IF  i                                 ( =   1.00000     )  LE  
+      Ne/2                              ( =   5.00000     )  THEN    
+
+ MODIFY ELEMENT         1 (IF SELECTED) TO HAVE  SEC  =      1
+     ELEM    MAT   TYP   REL   SEC   ESYS         NODES
+       1   1   1      1      1    0       1     3     2     0
+
+ *ELSE
+
+ *ENDIF
+
+ *ENDDO  INDEX= I                               
+
+ ELEMENT DISPLAYS USING REAL CONSTANT OR SECTION DATA WITH FACTOR     1.00
+
+ *** NOTE *** Display device has not yet been specified with the /SHOW command.  Display commands ignored. 
+
+ PARAMETER MASS =     0.000000000    
+
+ *DO LOOP ON PARAMETER= I FROM  1.0000     TO  10.000     BY  1.0000    
+
+ *GET  ELEMM     FROM  ELEM         1  ITEM=VOLU           VALUE= 0.605520000E-02
+
+ PARAMETER MASS =    0.6055200000E-02
+
+ *ENDDO  INDEX= I                               
+
+ PARAMETER MASS =     373.2800000    
+
+
+ ***** ROUTINE COMPLETED *****  CP =         0.000
+
+
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          1  NODES (OF         21  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES            1 TO          21 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+ ADDITIONAL DOFS=  UY    UZ    ROTX  ROTY  ROTZ
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN  2.0000     AND   2.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-01
+
+          1  NODES (OF         21  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED NODAL LOAD FY   FOR SELECTED NODES         1 TO       21 BY        1
+  REAL= -100.000000       IMAG=  0.00000000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
+                ---GIVE SUGGESTIONS ONLY---
+
+ ELEMENT TYPE         1 IS BEAM189 . KEYOPT(1)=1 IS SUGGESTED FOR NON-CIRCULAR CROSS
+ SECTIONS.
+
+ ELEMENT TYPE         1 IS BEAM189 . KEYOPT(15) IS ALREADY SET AS SUGGESTED.
+
+
+   *****MAPDL VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D                  
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ   ROTX ROTY ROTZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ Present time 0 is less than or equal to the previous time.  Time will   
+ default to 1.                                                           
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ The conditions for direct assembly have been met.  No .emat or .erot    
+ files will be produced.                                                 
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN
+                                                  FOR THE LAST SUBSTEP
+
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ Predictor is ON by default for structural elements with rotational      
+ degrees of freedom.  Use the PRED,OFF command to turn the predictor     
+ OFF if it adversely affects the convergence.                            
+
+
+
+                         ***********  PRECISE MASS SUMMARY  ***********
+
+   TOTAL RIGID BODY MASS MATRIX ABOUT ORIGIN
+               Translational mass               |   Coupled translational/rotational mass
+         373.28        0.0000        0.0000     |     0.0000        0.0000        0.0000    
+         0.0000        373.28        0.0000     |     0.0000        0.0000        317.71    
+         0.0000        0.0000        373.28     |     0.0000       -317.71        0.0000    
+     ------------------------------------------ | ------------------------------------------
+                                                |         Rotational mass (inertia)
+                                                |     1.5801        0.0000        0.0000    
+                                                |     0.0000        387.36       0.41505E-16
+                                                |     0.0000       0.41505E-16    387.36    
+
+   TOTAL MASS =  373.28    
+     The mass principal axes coincide with the global Cartesian axes
+
+   CENTER OF MASS (X,Y,Z)=   0.85114        0.0000        0.0000    
+
+   TOTAL INERTIA ABOUT CENTER OF MASS
+         1.5801        0.0000        0.0000    
+         0.0000        116.94       0.41505E-16
+         0.0000       0.41505E-16    116.94    
+     The inertia principal axes coincide with the global Cartesian axes
+
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1   373.280    
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 1.61472E+11 at element 0.                                     
+ Minimum = 8.738133333E+10 at element 0.                                 
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1        10  BEAM189       0.000   0.000000
+ Time at end of element matrix formulation CP = 0.                       
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =         120,    Maximum wavefront =      0
+  Memory available (MB) =    0.0    ,  Memory required (MB) =    0.0    
+
+ Sparse solver maximum pivot= 0 at node 0 .                              
+ Sparse solver minimum pivot= 0 at node 0 .                              
+ Sparse solver minimum pivot in absolute value= 0 at node 0 .            
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1        10  BEAM189       0.000   0.000000
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1        10  BEAM189       0.000   0.000000
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+ *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =         0.000
+
+
+   *****MAPDL VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+          ***** MAPDL RESULTS INTERPRETATION (POST1) *****
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ Reading results into the database (SET command) will update the current 
+ displacement and force boundary conditions in the database with the     
+ values from the results file for that load set.  Note that any          
+ subsequent solutions will use these values unless action is taken to    
+ either SAVE the current values or not overwrite them (/EXIT,NOSAVE).    
+
+ *GET  SMAX      FROM ELEMENT      6 S    EQV  MAX    VALUE=   286102.310    
+
+   AT ELEMENT NODE I
+
+ *GET  UMAX      FROM  NODE     21  ITEM=U    Y     VALUE=-0.228690300E-04
+
+ OPENED FILE=         FOR COMMAND FILE DATA 
+
+
+  COMMAND FILE CLOSED 
+
+
+ ***** END OF INPUT ENCOUNTERED *****
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          0
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
+
+
+ ***** PROBLEM TERMINATED BY INDICATED ERROR(S) OR BY END OF INPUT DATA *****
+
+
+ *---------------------------------------------------------------------------*
+ |                                                                           |
+ |                               RUN COMPLETED                               |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ |  Ansys MAPDL 2022 R2         Build 22.2         UP20220516    WINDOWS x64 |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ | Database Requested(-db)  1024 MB    Scratch Memory Requested      1024 MB |
+ | Maximum Database Used       1 MB    Maximum Scratch Memory Used     33 MB |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ |        CP Time      (sec) =          0.625       Time  =  18:12:00        |
+ |        Elapsed Time (sec) =          2.000       Date  =  11/26/2022      |
+ |                                                                           |
+ *---------------------------------------------------------------------------*
